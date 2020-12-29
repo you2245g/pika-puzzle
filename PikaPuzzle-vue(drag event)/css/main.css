@@ -1,0 +1,46 @@
+#wrapper{
+    width: 100vw;
+    height: 100vh;
+}
+
+#puzzle{
+    width: 600px;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container{
+    position: absolute;
+    opacity: 0.3;
+    width: 400px;
+    height: 400px;
+    left: 200px;
+    top: 100px;
+    background-image: url('../img/pikachu.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block{
+    width: calc(400px / 3);
+    height: calc(400px / 3);
+}
+
+[class*="move"]{
+    position: absolute;
+}
+
+.hover{
+    background-color: rgba(41, 7, 104, 0.75);
+}
+.onWork{
+    display: none;
+}
+
+.showWin{
+    text-align: center;
+}

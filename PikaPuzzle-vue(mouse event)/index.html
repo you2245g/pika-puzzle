@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pikachu Puzzle(mousemove事件)</title>
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="puzzle">
+				<image src="img/pikachu.png" class="background"></image>
+				<template v-for="value in 9">
+					<image 
+					:class="moveCss(value)"
+					:data-num="value"
+					:src="imgsrc(value)"  
+					:style="outward(value)"
+					@mousedown="elementDown($event)"
+					@mousemove="elementMove($event)"
+					@mouseout="elementMoveEnd($event)"
+					@mouseup="elementMoveEnd($event)"
+					></image>
+				</template>
+			</div>
+		</div>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.8/vue.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
